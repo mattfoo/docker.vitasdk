@@ -24,7 +24,7 @@ RUN git clone https://github.com/vitasdk/vdpm && \
     echo "running ./install-all.sh..."        && \
     ./install-all.sh >/dev/null 2>&1
 
-FROM base.docker:5000/debian:stretch
+FROM debian:stretch
 
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y -q --no-install-recommends \
