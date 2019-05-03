@@ -9,7 +9,7 @@ all: build
 clean-all: clean
 
 build:
-	@docker build --squash --rm=true -t $(REGISTRY)/$(NAME):$(VERSION) .
+	@docker build --rm=true -t $(REGISTRY)/$(NAME):$(VERSION) .
 	@docker images $(REGISTRY)/$(NAME)
 
 clean:
